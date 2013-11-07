@@ -1,0 +1,9 @@
+var BALTdata = 
+[
+	{
+		"template": "introduction-template"
+	},
+	{
+		"template": "copy-template"
+	}
+]
