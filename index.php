@@ -6,6 +6,9 @@
 	}
 ?>
 <!DOCTYPE html>
+
+<!--- YOU CAN DOWNLOAD THE CODE FOR THIS WEBSITE HERE ... WWW.GITHUB.COM/adriaanbalt/website -->
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -16,11 +19,12 @@
 		<title>BALT</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=640,user-scalable=no">
+		<link rel="shortcut icon" href="favicon.ico" >
 
 		<?php if ($env == 'PROD') { ?>
 		<link rel="stylesheet" href="css/BALT.min.css">
 		<?php } else { ?>
-		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/screen.css">
 		<?php } ?>
 
@@ -32,19 +36,96 @@
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrxade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-
-		<div id="navigation">
-
-		</div>
-
 		<div id="content">
 			
-			<header id="intro" class="waypointDest dark">
+			<div id="intro">
+				<span class="align"></span>
+				<div class="vcenter">
+					<div class="logo"></div>
+				</div>
+			</div>
+
+			<header class="waypointDest dark">
 				<span class="align"></span>
 				<div class="copy">
 					<div class="logo"></div>
 				</div>
 			</header>
+
+			<section>
+				<!--- quick reference to contact and social media -->
+			</section>
+
+			<section data-id="casestudies" class="casestudies chapter waypointDest dark">
+
+				<div class="accordion waypointDest dark">
+					<article id="<%= study.id %>" class="waypointDest dark">
+						<a class="button" href="javascript:void(0);">
+							<div style="background-image: url( '<%= study.button.bg %>' );"></div>
+							<h4><%= study.button.copy %></h4>
+							<img src='study.button.preview'/> // TODO add parallax to this item
+						</a>
+						<div class="content">
+							<div class="panels clearfix">
+								<div class="panel ratio16_9 video-viewport">
+									<a href="javascript:void(0);" class="control-btn inside">
+										<div class="cover">
+											<div class='slogan'>
+												<span class="align"></span>
+												<div class="copy">
+													<div class="play-btn"></div>
+													<h4><%= panel.video.headline %></h4>
+													<h2><%= panel.video.copy %></h2>
+												</div>
+											</div>
+											<img data-src="<%= panel.video.cover %>"/>
+										</div>
+									</a>
+								</div>
+								<div class="panel half ratio4_3 <%= panel.device %>">
+									<div class="inside">
+										<img data-src="<%= panel.image %>"/>
+									</div>
+								</div>
+								<div class="panel half ratio4_3 <%= panel.device %>">
+									<div class="inside">
+										<span class="align"></span>
+										<div class="copy">
+											<h5><%= panel.header %></h5>
+											<p><%= p %></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+
+			</section>
+
+			<section data-id="portfolio" class="portfolio chapter waypointDest light">
+				
+				<ul>
+					<li class='circle'>
+						<img src=''/>
+						<p></p>
+					</li>
+				</ul>
+
+			</section>
+
+			<footer class="waypointDest light">
+				
+				<div class="wrapper-small">
+					<ul>
+						<li style="background-image: url( '<%= data.bg-image %>' );">
+							<a href="<%= item.url %>" target="_blank"><h2><%= item.link %></h2></a>
+						</li>
+					</ul>
+					<h3 class='inner'>You may have missed something so...</h3>
+				</div>
+
+			</footer>
 
 		</div> <!-- #content -->
 
@@ -69,7 +150,6 @@
 		<script src="js/BALT.intro.js"></script>
 		<script src="js/BALT.nav.js"></script>	
 		<script src="js/BALT.reel.js"></script>	
-		<script src="js/BALT.spritAnimation.js"></script>
 		<script src="js/BALT.templates.js"></script>
 		<script src="js/BALT.videosVimeo.js"></script>
 		<?php } ?>
@@ -231,7 +311,7 @@
 					}%>
 					<article>
 						//circle with rollover
-					</article
+					</article>
 			</section>
 		</script>
 

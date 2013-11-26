@@ -1,8 +1,5 @@
-var BALTdata = 
+var BALT_website_data = 
 [
-	{
-		"template": "introduction-template"
-	},
 	{
 		"template": "accordion-template",
 		"casestudies":[
