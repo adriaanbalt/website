@@ -4,6 +4,51 @@ var BALTdata =
 		"template": "introduction-template"
 	},
 	{
-		"template": "copy-template"
+		"template": "accordion-template",
+		"casestudies":[
+			{
+				"id":"",
+				"button":{
+					"copy":"",
+					"bg":"",
+					"preview":"",
+				},
+				"panels":[
+					{
+						"video":{
+
+						}
+					},
+					{
+						"paragraph":[
+							"",
+							"",
+							""
+						]
+					},
+					{
+						"image":""
+					}
+				]
+
+			}
+		]
+	},
+	{
+		"template": "circles-template"
+	},
+	{
+		"template": "footer-template",
+		"contact":{
+			"items":[
+				{
+					"bg-image":"",
+					"url":"",
+					"link":"",
+					"color":""
+				}
+			]
+		}
+
 	}
 ]
