@@ -1,0 +1,50 @@
+.close-btn {
+	background: transparent url(../media/icons/close-btn.png) 50% 50% no-repeat;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	z-index: 100;
+	top: 50px;
+	left: 50px;
+	padding: 1em;
+}
+
+.menu-light{
+	background: transparent url(../media/icons/menu-light.png) 50% 50% no-repeat;
+	position: absolute;
+	width: 40px;
+	height: 26px;
+	z-index: 100;
+	top: 50px;
+	left: 50px;
+	padding: 1em;
+}
+
+.menu-dark{
+	background: transparent url(../media/icons/menu-dark.png) 50% 50% no-repeat;
+	position: absolute;
+	width: 40px;
+	height: 26px;
+	z-index: 100;
+	top: 50px;
+	left: 50px;
+	padding: 1em;
+}
+
+.play-btn {
+	background: transparent url(../media/icons/play_btn.svg) 50% 50% no-repeat;
+	width: 120px;
+	height: 120px;
+}
+
+.pause-btn {
+	background: transparent url(../media/icons/pause_btn.svg) 50% 50% no-repeat;
+	width: 120px;
+	height: 120px;
+}
+
+.logo {
+	background: transparent url(../media/intro/akqa_logo.svg) 0% 0% no-repeat;
+	width: 128px;
+	height: 62px;
+}

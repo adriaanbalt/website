@@ -2,7 +2,11 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+<<<<<<< HEAD
 /* line 17, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +28,224 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+<<<<<<< HEAD
 /* line 22, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 html {
   line-height: 1;
 }
 
+<<<<<<< HEAD
 /* line 24, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 ol, ul {
   list-style: none;
 }
 
+<<<<<<< HEAD
 /* line 26, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+<<<<<<< HEAD
 /* line 28, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
+<<<<<<< HEAD
 /* line 30, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
 /* line 103, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
+<<<<<<< HEAD
 /* line 32, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 a img {
   border: none;
 }
 
+<<<<<<< HEAD
 /* line 116, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+=======
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../sass/_main.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 3, ../sass/_main.scss */
+ol {
+  padding: 0 1em;
+}
+
+/* line 4, ../sass/_main.scss */
+li {
+  padding: 0;
+}
+
+/* line 5, ../sass/_main.scss */
+small {
+  font-weight: normal;
+  font-size: .75em;
+}
+
+/* line 6, ../sass/_main.scss */
+sup {
+  font-weight: normal;
+}
+
+/* line 7, ../sass/_main.scss */
+p {
+  margin: 0;
+}
+
+/* line 15, ../sass/_main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 20, ../sass/_main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 23, ../sass/_main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 27, ../sass/_main.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 31, ../sass/_main.scss */
+.shown {
+  display: block;
+  visibility: visible;
+}
+
+/* line 36, ../sass/_main.scss */
+.wrapper-large {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1228px;
+}
+
+/* line 42, ../sass/_main.scss */
+.wrapper-medium {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+/* line 48, ../sass/_main.scss */
+.wrapper-small {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+  padding: 2em 0;
+}
+
+/* line 55, ../sass/_main.scss */
+#main-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 60, ../sass/_main.scss */
+.layer {
+  position: absolute;
+  zoom: 1;
+}
+
+/* line 65, ../sass/_main.scss */
+.align {
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+}
+
+/* line 71, ../sass/_main.scss */
+.vcenter {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 76, ../sass/_main.scss */
+object {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 1, ../sass/_intro.scss */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 8, ../sass/_intro.scss */
+#intro .logo {
+  margin-top: -100px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 1, ../sass/_header.scss */
+header {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1, ../sass/_icons.scss */
+.logo {
+  background-image: url(../img/logo-blue.svg);
+  width: 630px;
+  height: 200px;
+}
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31

@@ -36,8 +36,6 @@ BALT.Intro = (function(BALT, self, window, undefined){
 
 		$intro = $('#intro');
 		$logo = $intro.find('.logo');
-		$divide = $intro.find('.divide');
-		$year = $intro.find('.year');
 
 		$.extend($.easing,
 		{
@@ -185,14 +183,10 @@ BALT.Intro = (function(BALT, self, window, undefined){
 	 */
 	_start = function() {
 		// fade logo in
-		$logo.css('left','100px').delay(250).animate( {
-			'opacity':1
-		}, {duration:1000, easing:'easeOutQuad', complete: function() {
-			// slide left
-			$(this).animate( {
-				'left':'0px'
-			}, {duration:500, easing:'easeOutQuad', complete: _stepOne} )
-		}});
+		$logo.animate( {
+			'opacity':1,
+			'margin-top':0,
+		}, {duration:1000, easing:'easeOutQuad', complete: _stepOne });
 	},
 
 	/**
@@ -202,30 +196,9 @@ BALT.Intro = (function(BALT, self, window, undefined){
 	 * @description
 	 */
 	_stepOne = function() {
-		$divide.animate( {
-			'opacity':1
-		}, 500 );
-		$year.delay(200).animate( {
-			'opacity':1
-		}, 500, _stepTwo);
-	},
-
-	/**
-	 * @name BALT.Intro-_stepTwo
-	 * @exports BALT.Intro-_stepTwo as BALT.Intro.stepOne
-	 * @function
-	 * @description
-	 */
-	_stepTwo = function() {
 		$logo.delay(1000).animate( {
 			'opacity':0
-		}, 500 );
-		$divide.delay(1200).animate( {
-			'opacity':0
-		}, 500 );
-		$year.delay(1400).animate( {
-			'opacity':0
-		}, 500, _done);
+		}, {duration:500, easing:'easeOutQuad', complete: _done } );
 	},
 
 
@@ -237,12 +210,6 @@ BALT.Intro = (function(BALT, self, window, undefined){
 	 */
 	_done = function() {
 		$('body').removeClass('noScroll');
-		$intro.delay(300).animate( {
-			'opacity':0
-		}, {duration:1000, easing:'easeOutQuad', complete: function() {
-			$(this).addClass('hidden');
-		} });
-
 		BALT.loadComplete();
 	};;
 

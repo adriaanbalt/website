@@ -1,0 +1,85 @@
+// MEDIA QUERY BREAK POINTS
+$breakpointLarge: 1280px;
+
+$breakpointDesktop: 1025px;
+
+$breakpointTablet: 860px;
+
+$breakpointMobile: 859px;
+
+$breakpointiPhone: 640px;
+
+// CENTERING SIZES
+
+$wrapper-large-width: 2056px;
+
+$wrapper-small-width: 960px;
+
+$wrapper-width: 1024px;
+
+$middle-width: 850px;
+
+$inner-width: 640px;
+
+// COLORS
+$gold-color: #89795f;
+
+$bg-color: #1f1f1f;
+
+$h1-color: $gold-color;
+
+$h2-color: #252525;
+
+$h3-color: #1f1f1f;
+
+$h4-color: #FFF;
+
+$h5-color: #1f1f1f;
+
+$h6-color: #FFF;
+
+$dt-color: #FFF;
+
+$dd-color: $gold-color;
+
+$h6-span-color: $gold-color;
+
+$p-color: #808080;
+
+$a-color: #1f1f1f;
+
+$header-bg-color: #eaeaea;
+
+$line-color: #e9e9e9;
+
+$nav-bg-color: rgba(#1f1f1f,.80);
+
+$nav-color: #fff;
+
+$nav-hover-color: #fff;
+
+$nav-hover-bg-color: rgba(#1f1f1f,.5);
+
+// ACCORDION
+
+$accordion-button-bg-color: #1f1f1f;
+
+$accordion-article-bg-color: #1f1f1f;
+
+$accordion-panel-bg: #fff;
+
+$accordion-button-duration: .5s;
+
+$accordion-duration: .75s;
+
+$accordion-ease: ease-out;
+
+$rollover-duration: .25s;
+
+$rollover-ease: linear;
+
+// INTRO
+
+$intro-duration: .5s;
+
+$intro-ease: ease-out;

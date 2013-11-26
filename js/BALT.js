@@ -77,7 +77,7 @@ window.BALT = (function(self, window, undefined){
 			large: 1140
 		}, BALT.$content );
 		
-		BALT.Templates.initialize();
+		// BALT.Templates.initialize();
 		BALT.Intro.initialize();
 
 		// prevent bootstrap from executing twice
@@ -86,11 +86,7 @@ window.BALT = (function(self, window, undefined){
 
 	_loadComplete = function() {
 		BALT.VideosVimeo.initialize();
-		BALT.Chapters.initialize();
-		BALT.Charts.initialize();
 		BALT.Accordion.initialize();
-		BALT.Reel.initialize();
-		BALT.Nav.initialize();
 		BALT.History.initialize();
 	};
 	

@@ -47,8 +47,8 @@ BALT.Templates = (function(BALT, self, window, undefined){
 		// 	// interpolate : /\{\{([\s\S]+?)\}\}/g
 		// };
 		
-		for ( var i = 0; i < BALTdata.length; i++ ){
-			config.sections[i] = new _Template( $('#content'), BALTdata[i].template, BALTdata[i] );
+		for ( var i = 0; i <  BALT_website_data.length; i++ ){
+			config.sections[i] = new _Template( $('#content'),  BALT_website_data[i].template,  BALT_website_data[i] );
 		}
 
 		config.initialized = true;

@@ -1,11 +1,14 @@
 <?php 
-	if ( strrpos($_SERVER['SERVER_NAME'], "www.balt.us") != false) ){
+	if ( strrpos($_SERVER['SERVER_NAME'], "www.balt.us") != false) {
 		$env = 'PROD';
 	} else {
 		$env = 'DEV';
 	}
 ?>
 <!DOCTYPE html>
+
+<!--- YOU CAN DOWNLOAD THE CODE FOR THIS WEBSITE HERE ... WWW.GITHUB.COM/adriaanbalt/website -->
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -16,11 +19,12 @@
 		<title>BALT</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=640,user-scalable=no">
+		<link rel="shortcut icon" href="favicon.ico" >
 
 		<?php if ($env == 'PROD') { ?>
 		<link rel="stylesheet" href="css/BALT.min.css">
 		<?php } else { ?>
-		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/screen.css">
 		<?php } ?>
 
@@ -63,6 +67,99 @@
 				</div>
 			</section>
 
+=======
+		<div id="content">
+			
+			<div id="intro">
+				<span class="align"></span>
+				<div class="vcenter">
+					<div class="logo"></div>
+				</div>
+			</div>
+
+			<header class="waypointDest dark">
+				<span class="align"></span>
+				<div class="copy">
+					<div class="logo"></div>
+				</div>
+			</header>
+
+			<section>
+				<!--- quick reference to contact and social media -->
+			</section>
+
+			<section data-id="casestudies" class="casestudies chapter waypointDest dark">
+
+				<div class="accordion waypointDest dark">
+					<article id="<%= study.id %>" class="waypointDest dark">
+						<a class="button" href="javascript:void(0);">
+							<div style="background-image: url( '<%= study.button.bg %>' );"></div>
+							<h4><%= study.button.copy %></h4>
+							<img src='study.button.preview'/> // TODO add parallax to this item
+						</a>
+						<div class="content">
+							<div class="panels clearfix">
+								<div class="panel ratio16_9 video-viewport">
+									<a href="javascript:void(0);" class="control-btn inside">
+										<div class="cover">
+											<div class='slogan'>
+												<span class="align"></span>
+												<div class="copy">
+													<div class="play-btn"></div>
+													<h4><%= panel.video.headline %></h4>
+													<h2><%= panel.video.copy %></h2>
+												</div>
+											</div>
+											<img data-src="<%= panel.video.cover %>"/>
+										</div>
+									</a>
+								</div>
+								<div class="panel half ratio4_3 <%= panel.device %>">
+									<div class="inside">
+										<img data-src="<%= panel.image %>"/>
+									</div>
+								</div>
+								<div class="panel half ratio4_3 <%= panel.device %>">
+									<div class="inside">
+										<span class="align"></span>
+										<div class="copy">
+											<h5><%= panel.header %></h5>
+											<p><%= p %></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+
+			</section>
+
+			<section data-id="portfolio" class="portfolio chapter waypointDest light">
+				
+				<ul>
+					<li class='circle'>
+						<img src=''/>
+						<p></p>
+					</li>
+				</ul>
+
+			</section>
+
+			<footer class="waypointDest light">
+				
+				<div class="wrapper-small">
+					<ul>
+						<li style="background-image: url( '<%= data.bg-image %>' );">
+							<a href="<%= item.url %>" target="_blank"><h2><%= item.link %></h2></a>
+						</li>
+					</ul>
+					<h3 class='inner'>You may have missed something so...</h3>
+				</div>
+
+			</footer>
+
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 		</div> <!-- #content -->
 
 		<?php if ($env == 'PROD') { ?>
@@ -86,7 +183,10 @@
 		<script src="js/BALT.intro.js"></script>
 		<script src="js/BALT.nav.js"></script>	
 		<script src="js/BALT.reel.js"></script>	
+<<<<<<< HEAD
 		<script src="js/BALT.spritAnimation.js"></script>
+=======
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 		<script src="js/BALT.templates.js"></script>
 		<script src="js/BALT.videosVimeo.js"></script>
 		<?php } ?>
@@ -94,6 +194,7 @@
 		<script>videojs.options.flash.swf = "video-js.swf";</script>
 
 		<script type="text/template" id="video-template">
+<<<<<<< HEAD
 			<iframe id="<%= data.id %>" src="http://player.vimeo.com/video/<%= data.src %>?api=1&player_id=<%= data.id %>" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</script>
 		
@@ -383,12 +484,49 @@
 						<h6><span>NEXT SECTION:</span><%= data.nextSection %></h6>
 					</a>
 				<% } %>
+=======
+			<div class='videoplayer'>
+				<iframe id="<%= data.id %>" src="http://player.vimeo.com/video/<%= data.src %>?api=1&player_id=<%= data.id %>" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div>
+		</script>
+
+		<script type="text/template" id="awards-template">
+			<section class="paragraph waypointDest light">
+				<div class="wrapper-small">
+					<h3 class='inner'><%= block.header %></h3>
+					<ul>
+						<% _.each(block.press, function(item,key,list){ %>
+							<li>
+								<a href="<%= item.link %>" target="_blank"><h2><%= item.article %></h2></a>
+								<h1><%= item.source %></h1>
+								<img data-src="<%= item.image %>"/>
+							</li>
+						<%});%>
+					</ul>
+				</div>
+			</section>
+		</script>
+
+		<script type="text/template" id="paragraph-template">
+			<section class="paragraph waypointDest light">
+				<div class="wrapper-small">
+					<div class='inner'>
+						<% if (data.header) { %>
+							<h3><%= data.header %></h3>
+						<% } %>
+						<% _.each( data.paragraph, function(p,key,list){ %>
+							<p><%= p %></p>
+						<%});%>
+					</div>
+				</div>
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 			</section>
 		</script>
 
 		<script type="text/template" id="accordion-template">
 			<section data-id="<%= data.name.toLowerCase() %>" class="<%= data.name.toLowerCase() %> chapter <%= data.status %> waypointDest dark">
 
+<<<<<<< HEAD
 				<div class="container waypointDest dark">
 
 					<header class='waypointDest dark'>
@@ -432,6 +570,28 @@
 								</a>
 								<div class="content">
 									<div class="me clearfix">
+=======
+					<div class="accordion waypointDest dark">
+
+						<% var iterator = 0, indexClass = '';
+						_.each(data.casestudy, function(study,key,list){
+							iterator++;
+							if ( iterator == 1 ) {
+								indexClass = ' first';
+							} else if ( iterator == data.blocks.length ) {
+								indexClass = ' last';
+							} else {
+								indexClass = '';
+							}%>
+							<article id="<%= study.id %>" class="waypointDest dark">
+								<a class="button" href="javascript:void(0);">
+									<div style="background-image: url( '<%= study.button.bg %>' );"></div>
+									<h4><%= study.button.copy %></h4>
+									<img src='study.button.preview'/> // TODO add parallax to this item
+								</a>
+								<div class="content">
+									<div class="panels clearfix">
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 
 									<% _.each( study.panels, function(panel,key,list){
 										if ( panel.video ){ %>
@@ -456,11 +616,14 @@
 													<% } %>
 												</a>
 											</div>
+<<<<<<< HEAD
 										<% } else if ( panel.quote ) { %>
 											<div class="quote clearfix">
 												<h2><%= panel.quote %></h2>
 												<p><%= panel.source %></p>
 											</div>
+=======
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 										<% } else if ( panel.stats ) { %>
 											<div class="stats">
 												<ul class='wrapper'>
@@ -510,6 +673,7 @@
 						<%});%>
 
 					</div>
+<<<<<<< HEAD
 					</div>
 				</div>
 
@@ -521,6 +685,49 @@
 			</section>
 		</script>
 
+=======
+
+				</div>
+
+			</section>
+		</script>
+
+		<script type="text/template" id="circle-template">
+			// other items in a circle list at bottom of screen
+			<section data-id="<%= data.name.toLowerCase() %>" class="<%= data.name.toLowerCase() %> chapter waypointDest light">
+				<% var iterator = 0, indexClass = '';
+				_.each(data.casestudy, function(study,key,list){
+					iterator++;
+					if ( iterator == 1 ) {
+						indexClass = ' first';
+					} else if ( iterator == data.blocks.length ) {
+						indexClass = ' last';
+					} else {
+						indexClass = '';
+					}%>
+					<article>
+						//circle with rollover
+					</article>
+			</section>
+		</script>
+
+		<script type="text/template" id="footer-template">
+			<footer class="waypointDest light">
+				<div class="wrapper-small">
+					<h3 class='inner'><%= data.header %></h3>
+					<ul>
+						<% _.each(data.items, function(item,key,list){ %>
+							<li style="background-image: url( '<%= data.bg-image %>' );">
+								<a href="<%= item.url %>" target="_blank"><h2><%= item.link %></h2></a>
+							</li>
+						<%});%>
+					</ul>
+				</div>
+			</footer>
+		</script>
+
+
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 		<script>
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-###-1']);

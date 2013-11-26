@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var BALTdata = 
 [
 	{
@@ -5,5 +6,56 @@ var BALTdata =
 	},
 	{
 		"template": "copy-template"
+=======
+var BALT_website_data = 
+[
+	{
+		"template": "accordion-template",
+		"casestudies":[
+			{
+				"id":"",
+				"button":{
+					"copy":"",
+					"bg":"",
+					"preview":"",
+				},
+				"panels":[
+					{
+						"video":{
+
+						}
+					},
+					{
+						"paragraph":[
+							"",
+							"",
+							""
+						]
+					},
+					{
+						"image":""
+					}
+				]
+
+			}
+		]
+	},
+	{
+		"template": "circles-template"
+	},
+	{
+		"template": "footer-template",
+		"contact":{
+			"items":[
+				{
+					"bg-image":"",
+					"url":"",
+					"link":"",
+					"color":""
+				}
+			]
+		}
+
+>>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 	}
 ]
