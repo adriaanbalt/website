@@ -1,61 +1,74 @@
-<<<<<<< HEAD
-var BALTdata = 
-[
-	{
-		"template": "introduction-template"
-	},
-	{
-		"template": "copy-template"
-=======
 var BALT_website_data = 
 [
 	{
+		"name":"introduction",
+		"template": "introduction-template",
+		"quote":"In aut vein aut facum",
+		"headline":"Welcome",
+		"paragraph": [
+			"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+			"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+			"Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum."
+		]
+	},
+	{
+		"name":"casestudies",
 		"template": "accordion-template",
 		"casestudies":[
 			{
-				"id":"",
+				"id":"kennethcole",
 				"button":{
-					"copy":"",
-					"bg":"",
+					"copy":"KENNETH COLE",
+					"color":"#0f0",
+					"preview":""
+				},
+				"panels":[
+					{
+						"video":{
+							"id":"",
+							"src":""
+						}
+					},
+					{
+						"paragraph":[
+							"Lorem Ipsum Dolar",
+							"Lorem Ipsum Dolar",
+							"Lorem Ipsum Dolar"
+						]
+					},
+					{
+						"image":"path"
+					}
+				]
+
+			},
+			{
+				"id":"red",
+				"button":{
+					"copy":"(RED)",
+					"color":"red",
 					"preview":"",
 				},
 				"panels":[
 					{
 						"video":{
-
+							"id":"",
+							"src":""
 						}
 					},
 					{
 						"paragraph":[
-							"",
-							"",
-							""
+							"Lorem Ipsum Dolar",
+							"Lorem Ipsum Dolar",
+							"Lorem Ipsum Dolar"
 						]
 					},
 					{
-						"image":""
+						"image":"path"
 					}
 				]
 
 			}
 		]
-	},
-	{
-		"template": "circles-template"
-	},
-	{
-		"template": "footer-template",
-		"contact":{
-			"items":[
-				{
-					"bg-image":"",
-					"url":"",
-					"link":"",
-					"color":""
-				}
-			]
-		}
-
->>>>>>> 826394fd3339321687e35304d52e977e14d13c31
 	}
 ]

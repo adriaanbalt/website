@@ -30,17 +30,14 @@ BALT.Chapters = (function(BALT, self, window, undefined){
 	 * @param {string} index
 	 */
 	_Chapter = function($target, index) {
-		
 		var accordion = this, 
 			$button = $target.find('.next-btn');
 		
 		this.$target = $target;
 		this.$button = $button;
+		this.$header = $target.find('header');
+		this.$headerAlign = $target.find('header .align');
 		this.index = index;
-
-		if ( $target.find('.sprite-animation').length > 0 ){
-			this.spriteIndex = BALT.SpriteAnimation.initialize( $target );
-		}
 
 		// subscribe to the resize and scroll events for this video
 		this.resize_uid = RwdResize.subscribe(this.resize, this);
@@ -69,31 +66,26 @@ BALT.Chapters = (function(BALT, self, window, undefined){
 	 */
 	_gotoIndex = function( index ) {
 
-		if ( config.chapters[index].spriteIndex != undefined ) {
-			BALT.SpriteAnimation.start( config.chapters[index].spriteIndex );
-		}
-
 		// lazy load the images
-		_lazyLoadChapter( index );
+		// _lazyLoadChapter( index );
 
-		config.chapters[index].$target.removeClass( 'closed' );
+		// config.chapters[index].$target.removeClass( 'closed' );
 
-		var prevIndex = (index > 0) ? (index-1) : 0;
-		var btn = config.chapters[prevIndex].$button;
+		// var prevIndex = (index > 0) ? (index-1) : 0;
+		// var btn = config.chapters[prevIndex].$button;
 
-		var prevChapterActive = config.chapters[prevIndex].$target.hasClass( 'closed' );
+		// var prevChapterActive = config.chapters[prevIndex].$target.hasClass( 'closed' );
 
-		if ( btn.hasClass('collapse') || prevChapterActive || index == 0 ){
-
-			config.chapters[index].scrollTo( index );
-		} else {
-			// btn.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e){
-			// 	if ( e.originalEvent.propertyName == 'opacity' ) config.chapters[index].scrollTo( index );
-			// });
-			// btn.addClass('animate').addClass( 'collapse' );
-			btn.addClass( 'collapse' );
-			config.chapters[index].scrollTo( index );
-		}
+		// if ( prevChapterActive || index == 0 ){
+		// 	config.chapters[index].scrollTo( index );
+		// } else {
+		// 	// btn.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e){
+		// 	// 	if ( e.originalEvent.propertyName == 'opacity' ) config.chapters[index].scrollTo( index );
+		// 	// });
+		// 	// btn.addClass('animate').addClass( 'collapse' );
+		// 	config.chapters[index].scrollTo( index );
+		// }
+		config.chapters[index].scrollTo( index );
 	},
 
 	/**
@@ -103,27 +95,23 @@ BALT.Chapters = (function(BALT, self, window, undefined){
 	 * @param {int} index
 	 */
 	_openChapter = function( index ) {
-
-		if ( config.chapters[index].spriteIndex != undefined ) {
-			BALT.SpriteAnimation.start( config.chapters[index].spriteIndex );
-		}
 		
 		// lazy load the images
-		_lazyLoadChapter( index );
+		// _lazyLoadChapter( index );
 
 		// remove closed class to open
-		config.chapters[index].$target.removeClass( 'closed' );
+		// config.chapters[index].$target.removeClass( 'closed' );
 
 		// determine the previous index.  0th index doesnt have a previous chapter
-		var prevIndex = (index > 0) ? (index-1) : 0;
+		// var prevIndex = (index > 0) ? (index-1) : 0;
 
-		// DOM element corresponding to the next button
-		var btn = config.chapters[prevIndex].$button;
+		// // DOM element corresponding to the next button
+		// var btn = config.chapters[prevIndex].$button;
 
-		// collapse the next button
-		if ( index != 0 ) btn.removeClass('animate').addClass( 'collapse' );
+		// // collapse the next button
+		// if ( index != 0 ) btn.removeClass('animate').addClass( 'collapse' );
 
-		config.chapters[index].$target.find('.waypointDest').waypoint( config.chapters[index].waypointReached, {offset:'66px'});
+		config.chapters[index].$target.find('.waypoint').waypoint( config.chapters[index].waypointReached, {offset:'66px'});
 		$.waypoints('refresh');
 		
 	},
@@ -222,9 +210,8 @@ BALT.Chapters = (function(BALT, self, window, undefined){
 		 * @param {object} data An object of resize data; layout, width, and layoutChanged
 		 */
 		resize : function(data) {
-			
-			this.$target.find('header').height(BALT.$window.height());
-			this.$target.find('header .align').height(BALT.$window.height());
+			this.$header.height(BALT.$window.height());
+			this.$headerAlign.height(BALT.$window.height());
 		},
 
 		/**
@@ -251,7 +238,7 @@ BALT.Chapters = (function(BALT, self, window, undefined){
 		 * @param {object} index of the chapter scrolling to
 		 */
 		 scrollComplete :function( index ) {
-			config.chapters[index].$target.find('.waypointDest').waypoint( this.waypointReached, {offset:'66px'});
+			config.chapters[index].$target.find('.waypoint').waypoint( this.waypointReached, {offset:'66px'});
 			$.waypoints('refresh');
 
 		},

@@ -59,7 +59,8 @@ BALT.Accordion = (function(BALT, self, window, undefined){
 		scrollTop = config.items[prevIndex].$target.offset().top;
 		if ( index != 0 ){
 			prevIndex = index - 1;
-			scrollTop = $('.work').offset().top + $('.work header').height() + (296*index);// config.items[index].$target.height();
+			scrollTop = $('.casestudies').offset().top  + (296*index);// config.items[index].$target.height();
+			console.log ( "$('.casestudies').offset().top : ", $('.casestudies').offset().top  );
 		}
 
 		config.items[index].open();
@@ -147,7 +148,7 @@ BALT.Accordion = (function(BALT, self, window, undefined){
 			this.$target.removeClass('open');
 			this.$content.height( 0 );
 			// pause video if playing
-			BALT.VideosVimeo.getVideoByID( this.$target.find('.video-player').attr('id') ).pause();
+			// BALT.VideosVimeo.getVideoByID( this.$target.find('.video-player').attr('id') ).pause();
 		},
 		
 		/**

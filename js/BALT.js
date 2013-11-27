@@ -77,16 +77,20 @@ window.BALT = (function(self, window, undefined){
 			large: 1140
 		}, BALT.$content );
 		
-		// BALT.Templates.initialize();
+		BALT.Templates.initialize();
 		BALT.Intro.initialize();
+		BALT.Header.initialize();
+		BALT.Chapters.initialize();
+		BALT.Accordion.initialize();
 
 		// prevent bootstrap from executing twice
 		config.initialized = true;
 	},
 
 	_loadComplete = function() {
+		console.log ( ' - load complete' );
 		BALT.VideosVimeo.initialize();
-		BALT.Accordion.initialize();
+		
 		BALT.History.initialize();
 	};
 	

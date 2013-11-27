@@ -62,6 +62,12 @@ html,body {
 	zoom: 1;
 }
 
+.collapse {
+	height: 0;
+	padding: 0;
+	opacity: 0;
+}
+
 .align {
 	vertical-align: middle;
 	display: inline-block;

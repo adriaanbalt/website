@@ -36,98 +36,7 @@
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrxade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<div id="content">
-			
-			<div id="intro">
-				<span class="align"></span>
-				<div class="vcenter">
-					<div class="logo"></div>
-				</div>
-			</div>
-
-			<header class="waypointDest dark">
-				<span class="align"></span>
-				<div class="vcenter">
-					<div class="logo"></div>
-				</div>
-			</header>
-
-			<section>
-				<!--- quick reference to contact and social media -->
-			</section>
-
-			<section data-id="casestudies" class="casestudies chapter waypointDest dark">
-
-				<div class="accordion waypointDest dark">
-					<article id="<%= study.id %>" class="waypointDest dark">
-						<a class="button" href="javascript:void(0);">
-							<div style="background-image: url( '<%= study.button.bg %>' );"></div>
-							<h4><%= study.button.copy %></h4>
-							<img src='study.button.preview'/> // TODO add parallax to this item
-						</a>
-						<div class="content">
-							<div class="panels clearfix">
-								<div class="panel ratio16_9 video-viewport">
-									<a href="javascript:void(0);" class="control-btn inside">
-										<div class="cover">
-											<div class='slogan'>
-												<span class="align"></span>
-												<div class="vcenter">
-													<div class="play-btn"></div>
-													<h4><%= panel.video.headline %></h4>
-													<h2><%= panel.video.copy %></h2>
-												</div>
-											</div>
-											<img data-src="<%= panel.video.cover %>"/>
-										</div>
-									</a>
-								</div>
-								<div class="panel half ratio4_3 <%= panel.device %>">
-									<div class="inside">
-										<img data-src="<%= panel.image %>"/>
-									</div>
-								</div>
-								<div class="panel half ratio4_3 <%= panel.device %>">
-									<div class="inside">
-										<span class="align"></span>
-										<div class="copy">
-											<h5><%= panel.header %></h5>
-											<p><%= p %></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-				</div>
-
-			</section>
-
-			<section data-id="portfolio" class="portfolio chapter waypointDest light">
-				
-				<ul>
-					<li class='circle'>
-						<img src=''/>
-						<p></p>
-					</li>
-				</ul>
-
-			</section>
-
-			<footer class="waypointDest light">
-				
-				<div class="wrapper-small">
-					<ul>
-						<li style="background-image: url( '<%= data.bg-image %>' );">
-							<a href="<%= item.url %>" target="_blank"><h2><%= item.link %></h2></a>
-						</li>
-					</ul>
-					<h3 class='inner'>You may have missed something so...</h3>
-				</div>
-
-			</footer>
-
-		</div> <!-- #content -->
+		<div id="content"></div> <!-- #content -->
 
 		<?php if ($env == 'PROD') { ?>
 		<script src="js/BALT.min.js"></script>
@@ -144,6 +53,7 @@
 		<script src="js/lib/jquery.appear.js"></script>
 		<script src="js/lib/waypoints.js"></script>
 		<script src="js/BALT.js"></script>
+		<script src="js/BALT.header.js"></script>	
 		<script src="js/BALT.accordion.js"></script>
 		<script src="js/BALT.chapters.js"></script>
 		<script src="js/BALT.history.js"></script>
@@ -156,64 +66,44 @@
 
 		<script>videojs.options.flash.swf = "video-js.swf";</script>
 
-		<script type="text/template" id="video-template">
-			<div class='videoplayer'>
-				<iframe id="<%= data.id %>" src="http://player.vimeo.com/video/<%= data.src %>?api=1&player_id=<%= data.id %>" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-			</div>
-		</script>
-
-		<script type="text/template" id="awards-template">
-			<section class="paragraph waypointDest light">
-				<div class="wrapper-small">
-					<h3 class='inner'><%= block.header %></h3>
-					<ul>
-						<% _.each(block.press, function(item,key,list){ %>
-							<li>
-								<a href="<%= item.link %>" target="_blank"><h2><%= item.article %></h2></a>
-								<h1><%= item.source %></h1>
-								<img data-src="<%= item.image %>"/>
-							</li>
-						<%});%>
-					</ul>
-				</div>
-			</section>
-		</script>
-
-		<script type="text/template" id="paragraph-template">
-			<section class="paragraph waypointDest light">
-				<div class="wrapper-small">
-					<div class='inner'>
-						<% if (data.header) { %>
-							<h3><%= data.header %></h3>
-						<% } %>
-						<% _.each( data.paragraph, function(p,key,list){ %>
-							<p><%= p %></p>
-						<%});%>
+		<script type="text/template" id="introduction-template">
+			<section data-id="<%= data.name.toLowerCase() %>" class="<%= data.name.toLowerCase() %> chapter waypoint light">
+				<header class="waypoint dark">
+					<span class="align"></span>
+					<div class="vcenter">
+						<div class="logo"></div>
+						<h1><%= data.quote %></h1>
 					</div>
-				</div>
+				</header>
+				<article class='wrapper-small'>
+					<h2><%= data.headline %></h2>
+					<% _.each( data.paragraph, function(p,key,list){ %>
+						<p><%= p %></p>
+					<%});%>
+				</article>
 			</section>
 		</script>
 
 		<script type="text/template" id="accordion-template">
-			<section data-id="<%= data.name.toLowerCase() %>" class="<%= data.name.toLowerCase() %> chapter <%= data.status %> waypointDest dark">
+			<section data-id="<%= data.name.toLowerCase() %>" class="<%= data.name.toLowerCase() %> chapter waypoint dark">
 
-					<div class="accordion waypointDest dark">
+					<div class="accordion waypoint dark">
 
 						<% var iterator = 0, indexClass = '';
-						_.each(data.casestudy, function(study,key,list){
+						_.each(data.casestudies, function(study,key,list){
 							iterator++;
 							if ( iterator == 1 ) {
 								indexClass = ' first';
-							} else if ( iterator == data.blocks.length ) {
+							} else if ( iterator == data.casestudies.length ) {
 								indexClass = ' last';
 							} else {
 								indexClass = '';
 							}%>
-							<article id="<%= study.id %>" class="waypointDest dark">
-								<a class="button" href="javascript:void(0);">
-									<div style="background-image: url( '<%= study.button.bg %>' );"></div>
-									<h4><%= study.button.copy %></h4>
-									<img src='study.button.preview'/> // TODO add parallax to this item
+							<article id="<%= study.id %>" class="waypoint dark">
+								<a class="button" href="javascript:void(0);" style='background-color:<%= study.button.color %>'>
+									<h4><%= study.button.headline %></h4>
+									<p><%= study.button.copy %></p>
+									<img src='study.button.preview' class='parallax'/>
 								</a>
 								<div class="content">
 									<div class="panels clearfix">
@@ -233,12 +123,6 @@
 														</div>
 														<img data-src="<%= panel.video.cover %>"/>
 													</div>
-													<% if ( panel.video.media.mp4 ){ %>
-													<div class="video-player" id="video-16x9-<%= study.id %>" data-src="<%= panel.video.media.mp4 %>" data-loop="false" data-muted="false" data-autoplay="false"></div>
-													<% } %>
-													<% if ( panel.video.media.gif ){ %>
-													<img class="gif" data-src="<%= panel.video.media.gif %>"/>
-													<% } %>
 												</a>
 											</div>
 										<% } else if ( panel.stats ) { %>
@@ -298,7 +182,8 @@
 
 		<script type="text/template" id="circle-template">
 			// other items in a circle list at bottom of screen
-			<section data-id="<%= data.name.toLowerCase() %>" class="<%= data.name.toLowerCase() %> chapter waypointDest light">
+			<section data-id="<%= data.name.toLowerCase() %>" class="<%= data.name.toLowerCase() %> chapter waypoint light">
+				<ul>
 				<% var iterator = 0, indexClass = '';
 				_.each(data.casestudy, function(study,key,list){
 					iterator++;
@@ -309,14 +194,73 @@
 					} else {
 						indexClass = '';
 					}%>
-					<article>
-						//circle with rollover
-					</article>
+
+						<li class='circle'>
+							<img src=''/>
+							<p></p>
+						</li>
+
+				<% }); %>
+
+				</ul>
+
+			</section>
+
+			<section data-id="portfolio" class="portfolio chapter waypoint light">
+				
+				<ul>
+					<li class='circle'>
+						<img src=''/>
+						<p></p>
+					</li>
+				</ul>
+
+			</section>
+
+
+		</script>
+
+
+		<script type="text/template" id="video-template">
+			<div class='videoplayer'>
+				<iframe id="<%= data.id %>" src="http://player.vimeo.com/video/<%= data.src %>?api=1&player_id=<%= data.id %>" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div>
+		</script>
+
+		<script type="text/template" id="awards-template">
+			<section class="paragraph waypoint light">
+				<div class="wrapper-small">
+					<h3 class='inner'><%= block.header %></h3>
+					<ul>
+						<% _.each(block.press, function(item,key,list){ %>
+							<li>
+								<a href="<%= item.link %>" target="_blank"><h2><%= item.article %></h2></a>
+								<h1><%= item.source %></h1>
+								<img data-src="<%= item.image %>"/>
+							</li>
+						<%});%>
+					</ul>
+				</div>
+			</section>
+		</script>
+
+		<script type="text/template" id="paragraph-template">
+			<section class="paragraph waypoint light">
+				<div class="wrapper-small">
+					<div class='inner'>
+						<% if (data.header) { %>
+							<h3><%= data.header %></h3>
+						<% } %>
+						<% _.each( data.paragraph, function(p,key,list){ %>
+							<p><%= p %></p>
+						<%});%>
+					</div>
+				</div>
 			</section>
 		</script>
 
 		<script type="text/template" id="footer-template">
-			<footer class="waypointDest light">
+			<footer class="waypoint light">
 				<div class="wrapper-small">
 					<h3 class='inner'><%= data.header %></h3>
 					<ul>
@@ -326,6 +270,7 @@
 							</li>
 						<%});%>
 					</ul>
+					<h3 class='inner'>You may have missed something so...</h3>
 				</div>
 			</footer>
 		</script>

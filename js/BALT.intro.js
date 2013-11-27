@@ -211,6 +211,8 @@ BALT.Intro = (function(BALT, self, window, undefined){
 	_done = function() {
 		$('body').removeClass('noScroll');
 		BALT.loadComplete();
+
+		$intro.addClass('hidden')
 	};;
 
 	

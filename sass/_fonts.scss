@@ -1,60 +1,102 @@
-// @font-face {
-//   font-family: 'Marcellus';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: local('Marcellus'), local('Marcellus-Regular'), url(http://themes.googleusercontent.com/static/fonts/marcellus/v1/FJNab1jzp1t7ctjNl8ugHLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-// }
+// http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,300italic,900,900italic,700
 
 @font-face {
-	font-family: 'ProximaLight';
-	src: url('fonts/Proxima Nova Cond Light.eot#') format('eot'),
-		 url('fonts/Proxima Nova Cond Light.woff') format('woff'),
-		 url('fonts/Proxima Nova Cond Light.ttf') format('truetype'),
-		 url('fonts/Proxima Nova Cond Light.svg#webfontFHzvtkso') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/d-6IYplOFocCacKzxwXSOLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/mnpfi9pxYH-Go5UiibESIrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/7m8l7TlFO-S3VkhHuR0at7rIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/1pO9eUAp8pSF8VnRTP3xnnYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  src: 	local('Roboto Black Italic'), 
+  		local('Roboto-BlackItalic'), 
+  		url(http://themes.googleusercontent.com/static/fonts/roboto/v9/bmC0pGMXrhphrZJmniIZpbrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+
+
+@font-face {
+        font-family: 'ProximaLight';
+        src: url('fonts/Proxima Nova Cond Light.eot#') format('eot'),
+                 url('fonts/Proxima Nova Cond Light.woff') format('woff'),
+                 url('fonts/Proxima Nova Cond Light.ttf') format('truetype'),
+                 url('fonts/Proxima Nova Cond Light.svg#webfontFHzvtkso') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 
 @font-face {
-	font-family: 'ProximaRegular';
-	src: url('fonts/Proxima Nova Cond Reg.eot#') format('eot'),
-		 url('fonts/Proxima Nova Cond Reg.woff') format('woff'),
-		 url('fonts/Proxima Nova Cond Reg.ttf') format('truetype'),
-		 url('fonts/Proxima Nova Cond Reg.svg#webfontFHzvtkso') format('svg');
-	font-weight: normal;
-	font-style: normal;
+        font-family: 'ProximaRegular';
+        src: url('fonts/Proxima Nova Cond Reg.eot#') format('eot'),
+                 url('fonts/Proxima Nova Cond Reg.woff') format('woff'),
+                 url('fonts/Proxima Nova Cond Reg.ttf') format('truetype'),
+                 url('fonts/Proxima Nova Cond Reg.svg#webfontFHzvtkso') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 
 @font-face {
-	font-family: 'ProximaExtraBold';
-	src: url('fonts/Proxima Nova Cond Bold.eot#') format('eot'),
-		 url('fonts/Proxima Nova Cond Bold.woff') format('woff'),
-		 url('fonts/Proxima Nova Cond Bold.ttf') format('truetype'),
-		 url('fonts/Proxima Nova Cond Bold.svg#webfontFHzvtkso') format('svg');
-	font-weight: normal;
-	font-style: normal;
+        font-family: 'ProximaExtraBold';
+        src: url('fonts/Proxima Nova Cond Bold.eot#') format('eot'),
+                 url('fonts/Proxima Nova Cond Bold.woff') format('woff'),
+                 url('fonts/Proxima Nova Cond Bold.ttf') format('truetype'),
+                 url('fonts/Proxima Nova Cond Bold.svg#webfontFHzvtkso') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 
 @font-face {
-	font-family: 'ProximaExtraBold';
-	src: url('fonts/Proxima Nova Cond Xbold.eot#') format('eot'),
-		 url('fonts/Proxima Nova Cond Xbold.woff') format('woff'),
-		 url('fonts/Proxima Nova Cond Xbold.ttf') format('truetype'),
-		 url('fonts/Proxima Nova Cond Xbold.svg#webfontFHzvtkso') format('svg');
-	font-weight: normal;
-	font-style: normal;
+        font-family: 'ProximaExtraBold';
+        src: url('fonts/Proxima Nova Cond Xbold.eot#') format('eot'),
+                 url('fonts/Proxima Nova Cond Xbold.woff') format('woff'),
+                 url('fonts/Proxima Nova Cond Xbold.ttf') format('truetype'),
+                 url('fonts/Proxima Nova Cond Xbold.svg#webfontFHzvtkso') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 
 body {
 	color: $p-color;
 	-webkit-font-smoothing: antialiased;
+	text-align: center;
 }
 
 h1 {
-	font-family: "trajan-pro-3", "Garamond", "Georgia", serif;
+	font-family: 'ProximaExtraBold';
 	font-weight: normal;
 	font-weight: 400;
-	font-size: 96px;
+	font-size: 40px;
 	text-align: center;
 	color: $h1-color;
 	letter-spacing: 18px;

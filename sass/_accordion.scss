@@ -9,6 +9,7 @@
 		.button.fadeOut {
 			@include opacity(0);
 		}
+		margin: 1px 0;
 		background: #000;
 		.button {
 			&.hidden {
@@ -16,7 +17,7 @@
 			}
 			display: block;
 			width: 100%;
-			padding: 7em 0;
+			padding: 11em 0;
 			position: relative;
 			overflow: hidden;
 			@include vendor-prefix( 'transition', $accordion-button-duration, false, $accordion-ease);
