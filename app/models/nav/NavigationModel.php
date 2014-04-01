@@ -46,17 +46,10 @@ class NavigationModel extends BaseModel {
 
 		foreach ($data as $n) {
 
-
 			$nav_item = new NavItemModel;
 			$nav_item->setID( $n->attributes['id'] );
 			$nav_item->setTitle( $n->attributes['title'] );
 			$nav_item->setSlug( $n->attributes['slug'] );
-
-			$subnav = NavigationModel::find($n->attributes['id'])->subnav;
-
-			foreach ( $subnav as $s ) {
-				$nav_item->addSubNavItem( $s );
-			}
 
 			if ($cur_section == $n->url) {
 				// $nav->setSubnav($nav_item->getSubnav());
@@ -85,11 +78,6 @@ class NavigationModel extends BaseModel {
 	{
 		$this->navArr[] = $item;
 		return $this;
-	}
-
-	public function subnav()
-	{
-        return $this->hasMany('SubNavItemModel',"nav_id");
 	}
 
 	public function getSelectedItem()

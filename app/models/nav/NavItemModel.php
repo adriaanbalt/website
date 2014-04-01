@@ -28,12 +28,6 @@ class NavItemModel extends BaseModel {
 		return $this;
 	}
 
-	public function getSubnav()
-    {
-        return $this->hasMany('SubNavItemModel');
-    }
-
-
 	public function setColor( $color_id )
 	{
 		$this->color_id = $color_id;
