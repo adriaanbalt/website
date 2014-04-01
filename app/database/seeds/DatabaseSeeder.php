@@ -11,7 +11,29 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+		$this->command->info('HERE WE GO!');
+
+		$this->call('NavigationTableSeeder');
+		$this->command->info('Navigation finished!');
+
+		$this->call('AboutTableSeeder');
+		$this->command->info('About finished!');
+
+		$this->call('ContactTableSeeder');
+		$this->command->info('Contact finished!');
+
+		$this->call('ProjectsTableSeeder');
+		$this->command->info('Women finished!');
+
+		$this->call('PhotosTableSeeder');
+		$this->command->info('Photos finished!');
+
+		$this->call('UpdatedWomenTableSeeder');
+		$this->command->info('Updated Women!');
+
+		$this->call('PivotWomenPhotosTableSeeder');
+		$this->command->info('Pivot Women Photos Board finished!');
+
 	}
 
 }
