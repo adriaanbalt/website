@@ -24,7 +24,6 @@
 		<meta property="og:description" content=""/>
 
 		<link href="{{ url('css/screen.css') }}" rel="stylesheet" />
-		<link href="{{ url('css/selectize.bootstrap3.css') }}" rel="stylesheet">
 
 		<script src="//use.edgefonts.net/abril-fatface:n4,i4.js"></script>
  
@@ -35,7 +34,7 @@
 	<body>
 		<div id="main" role="main" class=''>
 			@include('partials.navigation-mobile', array('status'=>'closed'))
-			<div id='content' class='mauve'>
+			<div id='content'>
 				@include('partials.navigation', array('status'=>'closed'))
 				@yield('content')
 				@include('partials.footer')
@@ -67,7 +66,6 @@
 		<script src="{{ url('js/libs/rwdResize.js') }}" type="text/javascript"></script>
 
 		<script src="{{ url('js/balt.js') }}" type="text/javascript"></script>
-		<script src="{{ url('js/balt.nav.js') }}" type="text/javascript"></script>
 
 	</body>
 </html>
