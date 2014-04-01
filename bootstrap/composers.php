@@ -18,21 +18,9 @@ View::composer('partials.navigation-mobile', function($view)
 	$view->with('navigation', $navigation->getNavigation());
 });
 
-View::composer('partials.definition', function($view)
-{
-	$data = DefinitionModel::all();
-	$view->with('data', $data );
-});
-
-View::composer('partials.intro', function($view)
-{
-	$data = DefinitionModel::all();
-	$view->with('data', $data );
-});
-
 View::composer('partials.footer', function($view)
 {
-	$data = ContactModel::find(1);
+	$data = Contact::find(1);
 	$view->with('data', $data );
 });
 
