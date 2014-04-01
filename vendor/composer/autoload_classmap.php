@@ -25,7 +25,6 @@ return array(
     'PivotWomenPhotosTableSeeder' => $baseDir . '/app/database/seeds/PivotProjectsPhotosTableSeeder.php',
     'Projects' => $baseDir . '/app/models/Projects.php',
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
-    'SubNavItemModel' => $baseDir . '/app/models/nav/SubNavItemModel.php',
     'TestCase' => $baseDir . '/app/tests/TestCase.php',
     'User' => $baseDir . '/app/models/User.php',
     'projectsTableSeeder' => $baseDir . '/app/database/seeds/ProjectsTableSeeder.php',
