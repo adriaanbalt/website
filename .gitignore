@@ -10,8 +10,6 @@
 .DS_Store
 .project
 
-/bootstrap/compiled.php
-/vendor
 composer.phar
 composer.lock
 .env.local.php
