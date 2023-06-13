@@ -1,0 +1,220 @@
+@import 'mixins.scss';
+@import 'reset.scss';
+:root {
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color--light-grey: #999999;
+	--column-gap: 45px;
+	--column-mobile-gap: 20px;
+	--min-card-width: 350px;
+	--max-card-width: 450px;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'NeueHaasGroteskDisp Pro';
+	margin: 0;
+	color: var(--color-black);
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	background-color: var(--color-white);
+	width: 100%;
+}
+
+
+.top-bg {
+	width: 100%; 
+	position: absolute;
+	top:0;
+	z-index: -10000;
+}
+
+.page {
+	margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction:column;
+	text-align: center;
+
+	@media (min-width: 600px) { 
+		width: 75%;
+	}
+	@media (min-width: 1200px) { 
+		width: 50%;
+	}
+	
+}
+
+.logo {
+	width: 128px;
+	height: 128px;
+	margin: 0 auto;
+}
+
+select {
+	width: 10%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.buttons {
+	margin-bottom: 3rem;
+}
+
+.button, a {
+	text-decoration: underline;
+	display: inline-block;
+	color: #000;
+	text-align: center;
+	justify-content: center;
+	&:hover {
+		text-decoration: none;
+		color: #666;
+	}
+
+	&.primary {
+		color: #fff;
+		border-radius: 10px;
+		padding: 15px 30px;
+		text-align: center;
+		margin: 1rem auto;
+		background-color: #6C6AE3;
+		&:hover {
+			background-color: #8d8bff;
+		}
+	}
+	&.secondary {
+		color: #fff;
+		border-radius: 10px;
+		padding: 15px 30px;
+		text-align: center;
+		margin: 1rem auto;
+		color: #ffffff;
+		font-weight: 700;
+		background-color: #6C6AE3;
+		&:hover {
+			background-color: #8d8bff;
+		}
+	}
+}
+
+.facebook {
+	width: 40px;
+	height: 40px;
+}
+
+.instagram {
+	width: 40px;
+	height: 40px;
+}
+
+.side-by-side {
+	display: flex;
+}
+
+.social {
+	margin-bottom: 2rem;
+	display: block;
+}
+
+h1 {
+	margin: 1rem 0;
+	font-weight: 300;
+}
+h2 {
+	margin: .5rem 0;
+}
+small {
+	display: block;
+	margin: 2rem 0 .5rem 0;
+}
+p {
+	font-size: 20px;
+	font-weight: 400;
+	margin: 1rem auto;
+	line-height: 1.4;
+}
+.tip {
+	width: 50%;
+	font-size: 16px;
+}
+
+.checkboxes {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	width: 50%;
+	justify-content: center;	
+}
+.checkbox {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	label {
+		margin-right: 5px;
+		font-size: 24px;
+	}
+	input {
+		margin-bottom: 5px;
+		align-self: flex-end;
+	}
+}
+
+// input {
+// 	padding: 10px;
+// 	width: 50%;
+// 	background-color: #acabff;
+// 	border-width: 1px;
+// 	border-color: #000000;
+// 	outline: 1;
+// 	border-radius: 10px;
+// }
+
+strong, b {
+	font-weight: 900;
+}
+
+.light {
+	color: var(--color--light-grey) !important;
+}
+
+.disabled {
+	pointer-events: none;
+}
+
+.no-select {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+  }
+
+ul {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	margin-bottom: 5rem;
+	li {
+		margin: .5em auto;
+		width: 45%;
+		@media (min-width: 600px) { 
+			width: 30%;
+		}
+		a {
+			margin: auto;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+	}
+}

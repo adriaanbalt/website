@@ -1,0 +1,28 @@
+@mixin column-count($count) {
+		$counts: (
+		'1': (
+			min-width: 0px,
+		),
+		'2': (
+			min-width: 800px,
+		),
+		'3': (
+			min-width: 1240px
+		)
+	) !default;
+
+	// If the key exists in the map
+	@if map-has-key($counts, $count) {
+		// Prints a media query based on the value
+		@media #{inspect(map-get($counts, $count))} {
+			@content;
+		}
+	}
+
+	// If the key doesn't exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$count}`. "
+        + "Available breakpoints are: #{map-keys($counts)}.";
+	}
+}
+
