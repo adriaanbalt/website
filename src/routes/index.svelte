@@ -7,7 +7,6 @@ import Footer from "$lib/Footer.svelte";
   <title>Balt</title>
 </svelte:head>
 
-<h2>About:</h2>
 <p>Developing digital products since 2010.</p>
 <h2>Apps:</h2>
 <ul>
