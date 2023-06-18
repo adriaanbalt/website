@@ -10,5 +10,5 @@
   <a href="/privacy-policy" >
     Privacy policy
   </a>
-  <small>The Balt Corporation is a US based company.</small>
+  <small>Balt is a US based company.</small>
 </footer>

@@ -8,7 +8,7 @@ import Footer from "$lib/Footer.svelte";
 </svelte:head>
 
 <h2>About:</h2>
-<p>The Balt Corporation, founded in January 2010, is owned solely by Adriaan Balt. This business entity has been responsible for developing digital products.</p>
+<p>Developing digital products since 2010.</p>
 <h2>Apps:</h2>
 <ul>
   <li><a href="https://apps.apple.com/us/app/greatflix/id1503917639" target="_blank">Greatflix</a></li>
