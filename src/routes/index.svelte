@@ -7,7 +7,7 @@ import Footer from "$lib/Footer.svelte";
   <title>Balt</title>
 </svelte:head>
 
-<p>Developing digital products since 2010.</p>
+<p>Creating digital products since 2010.</p>
 <h2>Apps:</h2>
 <ul>
   <li><a href="https://apps.apple.com/us/app/greatflix/id1503917639" target="_blank">Greatflix</a></li>
